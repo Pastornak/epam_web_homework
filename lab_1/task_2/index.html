@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+</head>
+
+<body style="margin-left: 5%; margin-right: 5%">
+    <form action="./success.html">
+        <input type="reset" value="Reset">
+        <br>
+        <label>
+            Title:
+            <br>
+            <input type="text" name="title" maxlength="25" required>
+        </label>
+        <br>
+        <label>
+            Phone number:
+            <br>
+            <input type="tel" name="phone_number" required>
+        </label>
+        <br>
+        <label>
+            Issue:
+            <br>
+            <select name="issue">
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+            </select>
+        </label>
+        <br>
+        <label>
+        <input type="checkbox" name="callback" value="true" checked> Call me back
+        </label>
+        <br>
+        <label>
+            Description:
+            <br>
+            <textarea name="description" cols=24 rows=5 required></textarea>
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
