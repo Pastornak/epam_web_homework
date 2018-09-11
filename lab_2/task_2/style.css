@@ -1,0 +1,152 @@
+*{
+    font-family: sans-serif;
+}
+
+a, p{
+    color: rgb(100, 100, 100);
+    
+}
+
+nav {
+    position: fixed;
+    width:100%;
+    top:-20px;
+    left:0px;
+}
+
+main{
+    margin: 70px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.navbar {
+    max-height: 70px;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 0px 3px 15px grey;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar *{
+    margin: 10px;
+    text-decoration: none;
+}
+
+#company_name{
+    margin-right: auto;
+}
+
+.navbar li:not(#company_name):hover a{
+    color:cornflowerblue;
+}
+
+.sign-up-button{
+    background: white;
+    border: 1px solid skyblue;
+    color: skyblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    width: 90%;
+}
+
+.sign-up-button:hover{
+    background: skyblue;
+    color: white;
+}
+
+.button{
+    background: skyblue;
+    border: 1px solid skyblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    width: 90%;
+}
+
+.button:hover{
+    background: rgb(80, 120, 160);
+    border-color: rgb(80, 120, 160);
+}
+
+.forms{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.form{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    flex: 1 1 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.form>.form-header{
+    width:100%;
+    border-bottom: 1px solid gray;
+}
+
+footer{
+    margin-top: 50px;
+    border-top: 1px solid gray;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-list{
+    list-style-type: none;
+}
+
+.footer-list li:nth-child(1n+1){
+    margin: 5px;
+}
+
+.footer-list a{
+    text-decoration: none;
+}
+
+.icon{
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 5px;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.title{
+    font-size: 40px;
+}
+
+.big-text{
+    font-size: 150%;
+}
+
+strong{
+    color:black;
+}
