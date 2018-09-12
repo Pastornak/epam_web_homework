@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search duplicate letters</title>
+</head>
+
+<body>
+    <h1 class="result">---</div>
+        <script>
+            //Написати функцію, яка буде виводити символи (включаючи пробыли, цифри) які повторюются в строці
+            function remember(str) {
+                var letterMap = new Map();
+                var letter;
+                var value;
+                for(var i = 0; i < str.length; i++){
+                    letter = str[i];
+                    if(letterMap.has(letter)){
+                        value = letterMap.get(letter);
+                        value++;
+                        letterMap.set(letter, value);
+                    } else{
+                        letterMap.set(letter, 1);
+                    }
+                }
+                return getDuplicatesArray(letterMap);
+            }
+            
+            function getDuplicatesArray(map){
+                var result = [];
+                for(var [key, value] of map){
+                    if(value > 1){
+                        result.push(key);
+                    }
+                }
+                return result;
+            }
+
+            // remember("apple") => returns ["p"]
+            console.log(remember("apple"));
+            // remember("apPle") => returns []          // "p" != "P"
+            console.log(remember("apPle"));
+            // remember("pippi") => returns ["p","i"]
+            console.log(remember("pippi"));
+            // remember('Pippi') => returns ["p","i"]
+            console.log(remember("Pippi"));
+        </script>
+</body>
+
+</html>

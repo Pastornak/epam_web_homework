@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String operations</title>
+</head>
+
+<body>
+    <script>
+        // 1. Написати функцію, скорочує строку і додає три крапки 
+        function truncate(str, maxlength) {
+            var newStr = str.substr(0, maxlength);
+            newStr += "...";
+            return newStr;
+        }
+        // truncate("рудщ ві віав",3) = "руд..."
+        console.log(truncate("рудщ ві віав",3));
+
+
+        // 2. Знайти кількість букв "а" в речені "Назва Львів дана місту на честь князя Лева Даниловича, сина засновника Львова Данила Галицького." використовуючи indexOf
+        function findAllUkrainianA(str){
+            var result = 0;
+            var index = str.indexOf('а'); //українська "а", без потреби не міняти, бо не буде працювати
+            while(index != -1){
+                result++;
+                index = str.indexOf('а', index + 1);
+            }
+            return result;
+        }
+        console.log(findAllUkrainianA("Назва Львів дана місту на честь князя Лева Даниловича, сина засновника Львова Данила Галицького."));
+
+
+        // 3. Написати функцію, яка буде фільтрувати рядок і видиляти слова "xxxx" i "polityka"
+        function censor(str){
+            var newStr = str;
+            newStr = newStr.replace(/ xxxx\.?\,? ?/gi, " ");
+            newStr = newStr.replace(/ polytika\.?\,? ?/gi, " ");
+            return newStr;
+        }
+        console.log(censor("This line has some xxxx and polytika in it. Also some XXXX and POLYTIKA."));
+
+
+        // 4. Профільтрувати строку "іва 24 уц ац34434ауку" і виветси тільки цифри
+        function filterForNumbers(str){
+            var newStr = str;
+            newStr = newStr.replace(/\D+/g, "");
+            return newStr;
+        }
+        console.log(filterForNumbers("іва 24 уц ац34434ауку"));
+    </script>
+</body>
+
+</html>
