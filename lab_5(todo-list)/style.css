@@ -23,16 +23,23 @@ ul {
 
 ul li{
     height: 100%;
+    width: 30%;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 10px;
+    word-break: break-all;
 }
 
 ul li *:not(del){
     margin-left:10px;
     margin-right:10px;
+}
+
+ul li del{
+    font-style: italic;
+    opacity: 0.5;
 }
 
 ul li:hover{
@@ -89,6 +96,7 @@ input[type=button]:hover{
 }
 
 .close-button{
+    margin-left: auto;
     position: relative;
     background:lightcoral;
     opacity: 0.9;
