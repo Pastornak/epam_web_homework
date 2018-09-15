@@ -51,11 +51,11 @@ function addTaskToList(){
 
 function updateList(condition){
     var tasks = Tasks.get();
-    // if(condition !== undefined){
-    //     tasks = filterTasks(Boolean(condition));
-    // } else{
-    //     tasks = Tasks.get();
-    // }
+    if(condition !== undefined){
+        tasks = filterTasks(Boolean(condition));
+    } else{
+        tasks = Tasks.get();
+    }
     var list = document.getElementById("todo-list");
     list.innerHTML = "";
     for(var [key, value] of tasks){
@@ -69,16 +69,16 @@ function updateList(condition){
     }
 }
 
-// function filterTasks(condition){
-//     var result = new Map();
-//     var tasks = Tasks.get();
-//     for(var [key, value] of tasks){
-//         if(value.finished == condition){
-//             result.set(key, value);
-//         }
-//     }
-//     return result;
-// }
+function filterTasks(condition){
+    var result = new Map();
+    var tasks = Tasks.get();
+    for(var [key, value] of tasks){
+        if(value.finished == condition){
+            result.set(key, value);
+        }
+    }
+    return result;
+}
 
 function toogleTaskAsFinished(taskID){
     Tasks.toogleIsFinished(taskID);
