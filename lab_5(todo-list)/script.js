@@ -49,14 +49,26 @@ function addTaskToList(){
     }
 }
 
-function updateList(condition){
-    var tasks = Tasks.get();
-    if(condition !== undefined){
-        tasks = filterTasks(Boolean(condition));
+function changeListClass(state){
+    var list = document.getElementById("todo-list");
+    if(state === undefined){
+        list.removeAttribute("class");
+    } else{
+        list.setAttribute("class", state);
+    }
+    updateList();
+}
+
+function updateList(){
+    var list = document.getElementById("todo-list");
+    var condition = list.getAttribute("class");
+    if(condition == "active"){
+        tasks = filterTasks(false);
+    } else if(condition == "completed"){
+        tasks = filterTasks(true);
     } else{
         tasks = Tasks.get();
     }
-    var list = document.getElementById("todo-list");
     list.innerHTML = "";
     for(var [key, value] of tasks){
         if(value.finished){

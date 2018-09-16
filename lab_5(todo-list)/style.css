@@ -55,6 +55,19 @@ input[type=text]{
     border-radius: 10px;
 }
 
+button{
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgb(100, 100, 100);
+    color: white;
+}
+
 input[type=button]{
     padding: 10px 18px;
     font-size: 18px;
