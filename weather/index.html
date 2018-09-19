@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="button-holder">
+        <button type="button" class="refresh-button zoomable" onclick="updateForm()"></button>
+        <button type="button" class="plus-button zoomable" onclick="addCity()"></button>
+    </aside>
+    <header class="align-center">
+        <h1>
+            Weather
+        </h1>
+    </header>
+
+    <section id="weather-info" class="align-center form">
+    </section>
+
+    <div id="form-popup" class="overlay">
+        <div id="form-add-city" class='align-center form-add-city'>
+            <p>Enter the city name (in English)</p>
+            <input type="text" id="city-name"><br>
+            <button type="button" class="submit-button" onclick="submitCity()">Confirm</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
