@@ -39,11 +39,13 @@ body{
 }
 
 .item{
+    position: relative;
+    width: 250px;
+    height: 235px;
     margin: 5px;
     padding: 5px;
     border: 3px rgb(170, 170, 170) solid;
     border-radius: 5px;
-    flex: 1 1 0;
     box-shadow: 0px 3px 10px black;
 }
 
@@ -103,6 +105,9 @@ button:active{
     width: 1em;
 }
 
+.refresh-button{
+    border-radius: 100px;
+}
 .refresh-button:before, .refresh-button:after {
     content: '';
     display: block;
@@ -126,6 +131,39 @@ button:active{
     top: 0.25em;
     left: 45%;
     width: 0;
+}
+
+.close-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 8, 8, 0.1);
+    border-radius: 150px;
+    transform: rotate(45deg);
+    height: 1.7em;
+    width: 1.7em;
+}
+.close-button:hover{
+    background-color: rgba(255, 8, 8);
+}
+.close-button:after,
+.close-button:before {
+    content: "";
+    display: block;
+    background-color: lightgrey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.close-button:before {
+    height: 1em;
+    width: 0.2em;
+}
+.close-button:after {
+    height: 0.2em;
+    width: 1em;
 }
 
 .submit-button{
